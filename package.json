@@ -1,0 +1,36 @@
+{
+  "name": "dunder-lsp-lsps",
+  "version": "1.0.0",
+  "main": "dist/src/index.js",
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "proto": "pbjs -t static-module -w wrapper.js --dependency protobufjs/minimal.js --es6 proto/lightning.proto proto/routerrpc.proto -o src/proto.js && pbts -o src/proto.d.ts src/proto.js",
+    "start": "yarn build && node dist/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hampus Sjöberg",
+  "private": true,
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "tsx": "^4.15.6",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@eznix/try": "^2.0.7",
+    "@grpc/grpc-js": "^1.10.9",
+    "@grpc/proto-loader": "^0.7.13",
+    "add": "^2.0.6",
+    "protobufjs": "^7.3.2",
+    "protobufjs-cli": "^1.1.2",
+    "yarn": "^1.22.22",
+    "zod": "^3.23.8"
+  }
+}

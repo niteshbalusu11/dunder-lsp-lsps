@@ -1,0 +1,23 @@
+{
+  "assumedOpenTransactionVbytes": 150,
+  "defaultChannelActiveConfs": 3,
+  "defaultChannelActiveConfsZeroConf": 0,
+  "defaultFundingConfirmedBlocks": 3,
+  "defaultLifetimeBlocks": 13000,
+  "minCapacity": 50000,
+  "maxCapacity": 1e6,
+  "minPushAmount": 0,
+  "maxPushAmount": 1e4,
+  "minChannelConfirmations": 3,
+  "fee": {
+    "maxSat": 40000,
+    "maxSatPerVByte": 200,
+    "subsidyFactor": 1
+  },
+  "backendConfig": {
+    "grpcServer": "localhost:10001",
+    "cert": "path/to/tls.cert",
+    "adminMacaroon": "path/to/admin.macaroon"
+  },
+  "allowZeroConfChannels": true
+}
